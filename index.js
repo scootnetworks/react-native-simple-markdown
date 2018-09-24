@@ -63,7 +63,7 @@ class Markdown extends Component<DefaultProps, Props, void> {
       const tree = SimpleMarkdown.parserFor(rules)(blockSource, {
         inline: false
       })
-      return SimpleMarkdown.reactFor(SimpleMarkdown.ruleOutput(rules, 'react'))(
+      return SimpleMarkdown.outputFor(rules, 'react')(
         tree
       )
     } catch (errors) {
